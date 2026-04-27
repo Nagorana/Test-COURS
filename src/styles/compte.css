@@ -1,0 +1,100 @@
+/* Reset propre */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #ECEFF1;
+}
+
+/* Conteneur principal */
+.compte-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Boîte centrale */
+.compte-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Titre */
+.compte-title {
+    background: #EEECF4;
+    padding: 20px 30px;
+    border-radius: 20px;
+    color: #BA8CBA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Groupes inputs */
+.compte-input-group {
+    margin-bottom: 30px;
+}
+
+.compte-input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #BA8CBA;
+    font-size: 18px;
+}
+
+.compte-input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    background: #e9e2ef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-size: 16px;
+}
+
+/* Bouton */
+.compte-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    background: #b08acb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+}
+
+.compte-button:hover {
+    background: #9a73b5;
+}
+
+/* Texte redirection */
+.redirect-text {
+    margin-top: 30px;
+    text-align: center;
+    color: #BA8CBA;
+    font-size: 16px;
+}
+
+.redirect-link {
+    color: #b08acb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redirect-link:hover {
+    color: #9a73b5;
+    text-decoration: underline;
+}

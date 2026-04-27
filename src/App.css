@@ -1,0 +1,125 @@
+/* === STYLES EXISTANTS === */
+.App { text-align: center; }
+.App-logo { height: 40vmin; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo { animation: App-logo-spin infinite 20s linear; }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-link { color: #61dafb; }
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* === LAYOUT === */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 200px;
+  background-color: #b08acb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sidebar-logo img {
+  width: 110px;
+  height: auto;
+}
+
+/* Infos utilisateur connecté */
+.sidebar-user {
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+
+.sidebar-user-email {
+  font-size: 11px;
+  color: #fff;
+  word-break: break-all;
+  opacity: 0.9;
+}
+
+.sidebar-badge-admin {
+  font-size: 10px;
+  background: #f59e0b;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Boutons sidebar */
+.sidebar button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #EEECF4;
+  color: #BA8CBA;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.sidebar button:hover {
+  background-color: #3f3f6f;
+  color: white;
+}
+
+/* Bouton déconnexion */
+.sidebar-btn-logout {
+  background-color: rgba(255,255,255,0.2) !important;
+  color: white !important;
+  margin-top: auto;
+}
+
+.sidebar-btn-logout:hover {
+  background-color: #c0392b !important;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #ECEFF1;
+}
+
+/* === ERREUR FORMULAIRE === */
+.compte-error {
+  background: #fde8e8;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
