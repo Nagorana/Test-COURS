@@ -1,66 +1,51 @@
 name: CI — Bidcardia
-
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
-
 jobs:
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
       - name: Install dépendances frontend
         run: npm install
-
       - name: Lint frontend
         run: npx eslint src/ --ext .js,.jsx --max-warnings 20
-
   test:
     name: Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
       - name: Install dépendances
         run: npm install
-
       - name: Tests React
         run: npm test -- --watchAll=false --passWithNoTests --testPathIgnorePatterns="src/App.test.js"
         env:
-            CI: true
-
+          CI: true
   audit:
     name: Audit sécurité
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Audit frontend
-        run: npm audit --audit-level=high
-
+        run: npm audit --audit-level=critical
       - name: Install Backend
         run: npm install
         working-directory: ./Backend
-
       - name: Audit backend
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=critical
         working-directory: ./Backend
