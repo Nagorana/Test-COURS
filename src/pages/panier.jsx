@@ -12,13 +12,7 @@ export default function Panier() {
         setCartItems(savedCart);
     }, []);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTime(Date.now());
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
+   
 
     const removeFromCart = (name) => {
         const updatedCart = cartItems.filter(item => item.name !== name);
