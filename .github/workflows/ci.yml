@@ -2,8 +2,12 @@ name: CI — Bidcardia
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
   pull_request:
     branches: [master]
+  workflow_dispatch:
 jobs:
   lint:
     name: Lint
