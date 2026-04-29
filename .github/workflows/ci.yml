@@ -20,7 +20,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dépendances frontend
-        run: npm ci
+        run: npm install
 
       - name: Lint frontend
         run: npx eslint src/ --ext .js,.jsx --max-warnings 0
@@ -37,7 +37,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dépendances
-        run: npm ci
+        run: npm install
 
       - name: Tests React
         run: npm test -- --watchAll=false --passWithNoTests
@@ -58,7 +58,7 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Install Backend
-        run: npm ci
+        run: npm install
         working-directory: ./Backend
 
       - name: Audit backend
