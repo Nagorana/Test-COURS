@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 export default function Panier() {
     const navigate = useNavigate();
     const [cartItems, setCartItems] = useState([]);
-    const [currentTime, setCurrentTime] = useState(Date.now());
 
 
     useEffect(() => {
